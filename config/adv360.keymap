@@ -10,11 +10,32 @@
       #include "version.dtsi"
       #ifndef VERSION_MACRO
 
-        macro_ver: macro_ver {
+        yank: yank {
             compatible = "zmk,behavior-macro";
-            label = "macro_version";
             #binding-cells = <0>;
-            bindings = <&kp RET>;
+            bindings = <&kp RG(C)>;
+            label = "YANK";
+        };
+
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RG(P)>;
+            label = "PASTE";
+        };
+
+        undo: undo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RG(Z)>;
+            label = "UNDO";
+        };
+
+        snagit: snagit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(P)))>;
+            label = "SNAGIT";
         };
 
         #endif
@@ -58,11 +79,11 @@
 
         workman {
             bindings = <
-&kp EQUAL        &kp N1             &kp N2           &kp N3    &kp N4     &kp N5  &trans                                                            &trans           &kp N6  &kp N7        &kp N8     &kp N9     &kp N0    &kp MINUS
-&kp TAB          &kp Q              &kp D            &kp R     &kp W      &kp B   &kp LBKT                                                          &kp RBKT         &kp J   &kp F         &kp U      &kp P      &kp SEMI  &kp BSLH
-&kp ESC          &kp A              &kp S            &kp H     &kp T      &kp G   &kp LEFT_BRACE  &kp LCTRL   &kp LALT      &kp RGUI     &kp RALT   &kp RIGHT_BRACE  &kp Y   &kp N         &kp E      &kp O      &kp I     &kp APOS
-&kp LSHFT        &kp Z              &kp X            &kp M     &kp C      &kp V                               &kp HOME      &kp K_COPY                               &kp K   &kp L         &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT
-&kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp PRINTSCREEN  &kp LEFT  &kp RIGHT          &kp BSPC        &kp DELETE  &kp END       &kp K_PASTE  &kp ENTER  &kp SPACE                &kp UP_ARROW  &kp DOWN   &kp TILDE  &trans    &tog 0
+&kp EQUAL        &kp N1             &kp N2   &kp N3    &kp N4     &kp N5  &trans                                                         &trans           &kp N6  &kp N7        &kp N8     &kp N9     &kp N0    &kp MINUS
+&kp TAB          &kp Q              &kp D    &kp R     &kp W      &kp B   &kp LBKT                                                       &kp RBKT         &kp J   &kp F         &kp U      &kp P      &kp SEMI  &kp BSLH
+&kp ESC          &kp A              &kp S    &kp H     &kp T      &kp G   &kp LEFT_BRACE  &kp LCTRL   &kp LALT      &kp RGUI  &kp RALT   &kp RIGHT_BRACE  &kp Y   &kp N         &kp E      &kp O      &kp I     &kp APOS
+&kp LSHFT        &kp Z              &kp X    &kp M     &kp C      &kp V                               &kp HOME      &yank                                 &kp K   &kp L         &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT
+&kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &snagit  &kp LEFT  &kp RIGHT          &kp BSPC        &kp DELETE  &kp END       &paste    &kp ENTER  &kp SPACE                &kp UP_ARROW  &kp DOWN   &kp TILDE  &trans    &to 0
             >;
         };
     };
