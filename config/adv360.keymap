@@ -79,11 +79,11 @@
 
         workman {
             bindings = <
-&kp EQUAL        &kp N1             &kp N2  &kp N3    &kp N4     &kp N5  &trans                                                         &trans           &kp N6  &kp N7        &kp N8     &kp N9     &kp N0    &kp MINUS
-&kp TAB          &kp Q              &kp D   &kp R     &kp W      &kp B   &kp LBKT                                                       &kp RBKT         &kp J   &kp F         &kp U      &kp P      &kp SEMI  &kp BSLH
-&kp ESC          &kp A              &kp S   &kp H     &kp T      &kp G   &kp LEFT_BRACE  &kp LCTRL   &kp LALT      &kp RGUI  &kp RALT   &kp RIGHT_BRACE  &kp Y   &kp N         &kp E      &kp O      &kp I     &kp APOS
-&kp LSHFT        &kp Z              &kp X   &kp M     &kp C      &kp V                               &kp HOME      &none                                 &kp K   &kp L         &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT
-&kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &none   &kp LEFT  &kp RIGHT          &kp BSPC        &kp DELETE  &kp END       &none     &kp ENTER  &kp SPACE                &kp UP_ARROW  &kp DOWN   &kp TILDE  &none     &to 0
+&kp EQUAL        &kp N1             &kp N2  &kp N3    &kp N4     &kp N5  &trans                                                               &trans                 &kp N6  &kp N7        &kp N8     &kp N9     &kp N0    &kp MINUS
+&kp TAB          &kp Q              &kp D   &kp R     &kp W      &kp B   &kp LEFT_PARENTHESIS                                                 &kp RIGHT_PARENTHESIS  &kp J   &kp F         &kp U      &kp P      &kp SEMI  &kp BSLH
+&kp ESC          &kp A              &kp S   &kp H     &kp T      &kp G   &kp LEFT_BRACKET      &kp LCTRL   &kp LALT      &kp RGUI  &kp RALT   &kp RBKT               &kp Y   &kp N         &kp E      &kp O      &kp I     &kp APOS
+&kp LSHFT        &kp Z              &kp X   &kp M     &kp C      &kp V                                     &kp HOME      &none                                       &kp K   &kp L         &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT
+&kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &none   &kp LEFT  &kp RIGHT          &kp BSPC              &kp DELETE  &kp END       &none     &kp ENTER  &kp SPACE                      &kp UP_ARROW  &kp DOWN   &kp TILDE  &none     &to 0
             >;
         };
     };
